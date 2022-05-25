@@ -1,16 +1,22 @@
 {
-  "name": "taller-de-dad-2022",
+  "name": "rest-node-dad",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "dev": "nodemon src/index.js --exec babel-node",
-    "start": "node dist/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosAcosta0899/ResExamen.git"
   },
   "keywords": [],
-  "author": "Carlos Gutierrez Acosta <carlosacosta@upeu.edu.pe>",
-  "license": "MTI",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosAcosta0899/ResExamen/issues"
+  },
+  "homepage": "https://github.com/CarlosAcosta0899/ResExamen#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -22,10 +28,9 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.18.0",
+    "@babel/core": "^7.18.2",
     "@babel/node": "^7.17.10",
-    "@babel/plugin-transform-runtime": "^7.18.0",
-    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-env": "^7.18.2",
     "nodemon": "^2.0.16"
   }
 }

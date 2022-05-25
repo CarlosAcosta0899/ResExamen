@@ -12,8 +12,9 @@ app.use(cors());
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
-  res.send("Bienvenidos a Node JS.......!");
+  res.send("Bienvenido a Node JS.......!");
 });
+
 app.use("/api/auth/post", postRoutes);
 app.use("/api/auth/usuario", usuarioRoutes);
 app.use("/api/auth/persona", personaRoutes);

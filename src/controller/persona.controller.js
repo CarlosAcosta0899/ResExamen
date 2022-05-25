@@ -49,7 +49,7 @@ export const updatePersona = async (req, res) => {
     );
     return res
       .status(200)
-      .json({ message: "Persona editado correctamente" });
+      .json({ message: "Persona modificado correctamente" });
   } catch (e) {
     return res.status(500).json("Error al listar Post");
   }
@@ -59,7 +59,7 @@ export const deletePersona = async (req, res) => {
   try {
     const id = parseInt(req.params.id);
     await pool.query("delete from personas where idpersona = $1", [id]);
-    return res.status(200).json({ message: "Persona eliminada" });
+    return res.status(200).json({ message: "Eliminado Persona" });
   } catch (e) {
     return res.status(500).json("Error al listar Post");
   }

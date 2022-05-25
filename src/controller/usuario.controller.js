@@ -49,7 +49,7 @@ export const updateUsuario = async (req, res) => {
     );
     return res
       .status(200)
-      .json({ message: "Usuario editado correctamente" });
+      .json({ message: "Usuario modificado correctamente" });
   } catch (e) {
     return res.status(500).json("Error al listar Post");
   }

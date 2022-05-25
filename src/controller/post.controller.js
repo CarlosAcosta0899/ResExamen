@@ -31,15 +31,6 @@ export const crearPost = async (req, res) => {
     return res.status(500).json("Error al listar Post");
   }
 };
-export const deletePost = async (req, res) => {
-  try {
-    const id = parseInt(req.params.id);
-    await pool.query("select fc_delete_post($1)", [id]);
-    return res.status(200).json({ message: "Post eliminado correctamente" });
-  } catch (e) {
-    return res.status(500).json("Error al listar Post");
-  }
-};
 
 export const updatePost = async (req, res) => {
   try {
@@ -50,10 +41,18 @@ export const updatePost = async (req, res) => {
       descripcion,
       id,
     ]);
-    return res.status(200).json({ message: "Post editado correctamente" });
+    return res.status(200).json({ message: "Post modificado correctamente" });
   } catch (e) {
     return res.status(500).json("Error al listar Post");
   }
 };
 
-
+export const deletePost = async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    await pool.query("select fc_delete_post($1)", [id]);
+    return res.status(200).json({ message: "Post eliminado correctamente" });
+  } catch (e) {
+    return res.status(500).json("Error al listar Post");
+  }
+};

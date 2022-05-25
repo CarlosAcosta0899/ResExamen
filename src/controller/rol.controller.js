@@ -31,15 +31,6 @@ export const crearRol = async (req, res) => {
     return res.status(500).json("Error al listar Post");
   }
 };
-export const deleteRol = async (req, res) => {
-  try {
-    const id = parseInt(req.params.id);
-    await pool.query("delete from roles where idrol = $1", [id]);
-    return res.status(200).json({ message: "Eliminado" });
-  } catch (e) {
-    return res.status(500).json("Error al listar Post");
-  }
-};
 
 export const updateRol = async (req, res) => {
   try {
@@ -49,10 +40,18 @@ export const updateRol = async (req, res) => {
       estado,
       idrol,
     ]);
-    return res.status(200).json({ message: "Rol editado correctamente" });
+    return res.status(200).json({ message: "Rol modificado correctamente" });
   } catch (e) {
     return res.status(500).json("Error al listar Post");
   }
 };
 
-
+export const deleteRol = async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    await pool.query("delete from roles where idrol = $1", [id]);
+    return res.status(200).json({ message: "Eliminado" });
+  } catch (e) {
+    return res.status(500).json("Error al listar Post");
+  }
+};
